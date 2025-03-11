@@ -2,6 +2,15 @@
 
 ---
 
+## Setup Environment
+```shell
+python3 -m pip install virtualenv
+python3 -m venv venv
+source ./venv/bin/activate
+pip install --upgrade pip
+python -m pip install -r requirements.txt 
+```
+
 
 ## Run Application
 
@@ -16,7 +25,7 @@ gunicorn -c gunicorn_config.py wsgi:app
 
 OR
 
-gunicorn --name "DockerMultiLayer" -c gunicorn_config.py wsgi:app
+gunicorn --name "gunicorn" -c gunicorn_config.py wsgi:app
 ```
 
 
