@@ -75,7 +75,14 @@ docker stop docker-multi-layer && docker container rm docker-multi-layer
 for pid in $(ls /proc || grep -E '^[0-9]+$'); do cat /prod/$pid/cmdline; echo; done
 ```
 
-## Check Datadlog Logs
+## Access Logs
+
+- Check Application Logs
+```shell
+cat /var/log/gunicorn/error.log
+```
+
+- Check Datadog Logs
 ```shell
 cat /var/log/datadog/agent.log
 ```
