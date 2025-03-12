@@ -1,5 +1,5 @@
 init_config:
-
+  service: "EXAMPLE_GUNICORN_APP"
 instances:
     ## @param proc_name - string - required
     ## The name of the gunicorn process. For the following gunicorn server:
@@ -12,12 +12,10 @@ instances:
 logs:
 - type: file
   path: /var/log/gunicorn/access.log
-  service: "EXAMPLE_GUNICORN_APP"
   source: gunicorn
 
 - type: file
   path: /var/log/gunicorn/error.log
-  service: "EXAMPLE_GUNICORN_APP"
   source: gunicorn
   log_processing_rules:
     - type: multi_line
