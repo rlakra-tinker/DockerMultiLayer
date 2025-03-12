@@ -22,7 +22,7 @@ ENV DD_LOGS_ENABLED="true"
 ENV DD_APM_ENABLED="true"
 ENV DD_SITE="datadoghq.com"
 ENV DD_INSTALL_ONLY="false" 
-ENV DD_API_KEY="" 
+ENV DD_API_KEY="61ffbaddaa97a867b302ff54f5b181d5"
 RUN bash -c "$(curl -L https://install.datadoghq.com/scripts/install_script_agent7.sh)"
 RUN cp /etc/datadog-agent/security-agent.yaml.example /etc/datadog-agent/security-agent.yaml
 
