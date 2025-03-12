@@ -28,6 +28,15 @@ OR
 gunicorn --name "gunicorn" -c gunicorn_config.py wsgi:app
 ```
 
+- Access Service
+```shell
+http://0.0.0.0:8080
+
+OR
+
+http://0.0.0.0:8080/?name=Rohtash
+```
+
 
 ## Docker Commands
 
